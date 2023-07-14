@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <nav>
+    <img src="./images/logo.svg" alt="logo"/>
+
+        <ul class="nav_menu" >
+          <li>
+            <span onclick="ftoggleMenu()">Features</span><img src="./images/icon-arrow-down.svg"/>
+
+            <div class="nav_menu-dropdown_wrapper" id="f-subMenu">
+              <ul class="nav_menu-dropdown_list">
+                <li>
+                  <img src="./images/icon-todo.svg" alt="calendar"/>
+                  <span>Todo List</span>
+                </li>
+                <li>
+                  <img src="./images/icon-calendar.svg" alt="calendar"/>
+                  <span>Calendar</span>
+                </li>
+                <li>
+                  <img src="./images/icon-reminders.svg" alt="calendar"/>
+                  <span>Reminder</span>
+                </li>
+                <li>
+                  <img src="./images/icon-planning.svg" alt="calendar"/>
+                  <span>Planning</span>
+                </li>
+              </ul>
+            </div>
+        
+          </li>
+          <li>
+            <span onclick="ctoggleMenu()">Company</span><img src="./images/icon-arrow-down.svg"/>
+
+            <div class="nav_menu-dropdown_wrapper-c" id="c-subMenu">
+              <ul class="nav_menu-dropdown_list">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>Career</li>
+          <li>About</li>
+        </ul>
+
+    <div class="nav_menu-button">
+      <button class="login-button">Log In</button>
+      <button class="register-button">Register</button>
+    </div>
+    
+    <img src="./images/icon-menu.svg" alt="menu" class="tab"/>
+    
+  </nav>
+
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-left_info">
+        <div class="hero-left_title">Make <br/> remote work</div>
+        <div class="hero-left_desc">
+          Get your team in sync, no matter your location.<br/>Streamline processes, create team ritual, and<br/> watch productivity soar.
+        </div>
+        <button class="hero-button">Learn More</button>
+      </div>
+  
+      <div class="hero-left_customer">
+        <img src="./images/client-databiz.svg" alt="databiz"/>
+        <img src="./images/client-audiophile.svg" alt="audiophile"/>
+        <img src="./images/client-meet.svg" alt="meet"/>
+        <img src="./images/client-maker.svg" alt="maker"/>
+      </div>
+    </div>
+  
+    <div class="hero-right">
+      <img src="./images/image-hero-desktop.png" alt="hero"/>
+    </div>
+  </div>
+  
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Boongkee</a>.
+  </footer>
+  
+  <script>
+      function ftoggleMenu() {
+        var subMenu = document.getElementById("f-subMenu");
+        subMenu.classList.toggle("open-menu");
+      }
+
+      function ctoggleMenu() {
+        var subMenu = document.getElementById("c-subMenu");
+        subMenu.classList.toggle("open-menu");
+      }
+  </script>
+</body>
+</html>
